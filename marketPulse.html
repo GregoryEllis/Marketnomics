@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Market Pulse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/m-pulse.css" >
+</head>
+<body>
+    <!-- nav and its elements -->
+    <nav id="navbar-site" class="navbar-nav a navbar-expand-sm fixed-top d-flex justify-content-between">
+        <div class="container">
+            <button class=" menu mt-2 bg-success  navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+            </button>
+            <div class="menuBackground collapse navbar-collapse" id="myTogglerNav"> 
+                <div class="navbar-nav m-auto ">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item "><a class= "nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class= "nav-link text-success active" href="marketPulse.html">MARKET PULSE</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="quiz.html"> MARKET QUIZ</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="portfolioRisk.html">PORTFOLIO RISK </a></li>
+                    </ul>
+                </div><!-- navbar -->
+            </div><!-- collapse -->
+        </div><!-- container -->
+    </nav><!-- nav -->
+    <!-- background image -->
+    <img class="y transparent card-img-center bg-dark" src="images/Ben.jpg" alt="stock-market-board">
+    <!-- heading -->
+    <div class="card-img-overlay card-inverse text-center">
+        <h1 class="card-title display-3 font-weight-bold text-success logo"> Market Pulse
+        </h1>
+    </div>
+    <!-- button-->
+    <div  class="card-img-overlay text-center" >
+        <button class="Btn" id="markets" >Markets</button>
+    </div>
+    <!-- table for U.S. Markets -->
+    <div id="majorMarkets" class=" card-img-overlay table col-8 col- ">
+        <div class="card-header theading text-center pt-2 display-4 font-weight-bold ">U.S. MARKETS</div>
+        <table class="ui inverted blue left aligned table  table-striped table ">
+            <tbody>
+                <tr>
+                    <td>Dow Jones Industrial Average</td>
+                    <td id="DJIA"></td>
+                </tr>
+                <tr>
+                    <td>S&P500 Composite</td>
+                    <td id="SP"></td>
+                </tr>
+                <tr>
+                    <td>NASDAQ</td>
+                    <td id="NAS"></td>
+                </tr>
+                <tr>
+                    <td>Russell 2000</td>
+                    <td id="R2000"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- u.s. markets -->
+    <!-- table for cryptocurrencies -->
+    <div id="crypto" class="card-img-overlay table col-8 col- ">
+        <div class="card-header theading text-center pt-2 display-4 font-weight-bold ">CRYPTOCURRENCIES</div>
+        <table class="ui inverted blue left aligned table  table-striped table ">
+            <tbody>
+                <tr>
+                    <td>BITCOIN/USD COIN METRICS</td>
+                    <td id="bitcoin"></td>
+                </tr>
+                <tr>
+                    <td>ETHER/USD COIN METRICS</td>
+                    <td id="ether"></td>
+                </tr>
+                <tr>
+                    <td>LITECOIN/USD COIN METRICS</td>
+                    <td id="litecoin"></td>
+                </tr>
+                <tr>
+                    <td>XRP/USD COIN METRICS</td>
+                    <td id="xrp"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- crypto -->
+<!-- To store store stock and breaking news info -->
+    <footer>    
+        <div class= "text-center ">
+            <div id="randomEvents"></div>
+        </div>
+        <div class="tickerDiv card-block blue">  
+            <p id="ticker" class=" text-nowrap pt-1 pb-1 " style="position: relative;"></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin = "anonymous"></script>
+<script src="./javaScript/marketPulse.js"></script>
+<script src="./javaScript/main.js"></script>
+
+</body>
+</html>
