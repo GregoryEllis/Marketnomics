@@ -1,0 +1,179 @@
+/*-----------------------------------------------------------------
+To set the text of <body>, the back-ground color, and the center content -----------------------------------------------------------------*/
+
+body {
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+/*----------------------------------------------------------------     To position and style the h2, containers, and or wrappers
+-----------------------------------------------------------------*/
+li {
+    position: relative;
+    bottom: 4px;
+}
+
+h2 {
+    position: relative;
+    top: 100px;
+}
+
+h1 {
+    opacity: .8;
+}
+
+.scoreCount-wrapper {
+    position: relative;
+    top: 100px;
+}
+
+.green-box {
+    height: 350px;
+    border: solid yellow 2px;
+    background-color: green;
+    position: relative;
+    top: 100px;
+    width: 75%;
+    opacity: .8;
+}
+
+.button-container {
+    height: 75px;
+    position: relative;
+    top: 100px;
+}
+
+#container {
+    margin-top: 50px;
+}
+
+/*-----------------------------------------------------------------
+To style <button>'s and position them 
+------------------------------------------------------------------*/
+
+button {
+    color: yellow;
+    background-color: rgb(0, 158, 67);
+    border: solid 1px yellow;
+    z-index: 20;
+    opacity: .8;
+}
+
+button:hover {
+    background-color: yellow;
+    color: green;
+}
+
+button:active {
+    border: solid 5px yellow;
+}
+
+button {
+    margin-right: 10px;
+}
+
+/*------------------------------------------------------------------
+To position the the <div>'s
+-----------------------------------------------------------------*/
+
+#printQuestions {
+    font-size: 36px;
+}
+
+#printAnswers {
+    font-size: 24px;
+}
+
+#printResults {
+    font-size: 48px;
+}
+
+.quizInstructionsDiv {
+    margin: 250px auto ;
+    background-color: green;
+    border: solid 1px yellow;
+    height: 170px;
+    width: 75%;
+    font-size: 20px;
+    opacity: .8;
+}
+
+#yourScore {
+    font-size: 48px;
+}
+
+#correctAnswer {
+    font-size: 48px;
+}
+
+/*-------------------------------
+MEDIA QUERIES:
+---------------------------------*/
+
+/* To adjust the size of the <div class="quizInstructionsDiv"> */
+@media only screen and (max-width: 679px) {
+    
+    .quizInstructionsDiv {
+        height: 265px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    
+    /* To adjust <button> NEXT QUESTION </button> */
+    #next {
+        width: 300px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    /* To adjust <div class"quizInstructionsDiv"></div> */
+    .quizInstructionsDiv {
+        font-size: 26px;
+        margin-top: 300px;
+        height: 125px;
+    }
+    
+    /* To adjust font-size of <div class"printQuestions"> */
+    #printQuestions{
+        font-size: 72px;
+    }
+    
+    /* To adjust <div class="green-box"></div> */
+    .green-box {
+        margin-top: -10px;
+        height: 450px;
+    }
+    
+    /* To adjust font-size of <h2>  */
+    h2 {
+        font-size: 48px;
+    }
+    
+    /* To adjust font-size of <div class="scoreCount-wrapper" */
+    .scoreCount-wrapper {
+        font-size: 32px;
+    }
+    
+    /* To adjust font-size of <div id="printResults">   */
+    #printResults {
+        font-size: 100px;
+    }
+
+    #correctAnswer {
+        font-size: 72px;
+    }
+    
+    /* To adjust font-size of <div id=" #yourScore"> */
+    #yourScore {
+        font-size: 100px;
+    }
+    
+    /* To adjust <button class="btnAnswer"> */
+    .btnAnswer {
+        height: 55px;
+        width: 200px;
+        font-size: 32px;
+    }
+}
