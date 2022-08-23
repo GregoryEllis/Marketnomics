@@ -42,7 +42,7 @@ To style <img>'s and <p>'s
 }
 
 .greenBorder {
-    border: solid 10px red;
+    border: solid 10px green;
     border-radius: 20px;
 }
 
