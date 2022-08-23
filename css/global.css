@@ -1,0 +1,185 @@
+/*----------------------------------------------------------
+To style the <body>
+-------------------------------------------------------------*/
+
+body {
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+    height: 875px;
+
+}
+
+.transparent {
+    height: 880px;
+}
+
+/*----------------------------------------------------------
+To style the <h1 class="logo">
+-------------------------------------------------------------*/
+
+.logo {
+    color: rgb(0, 158, 67);
+    text-shadow: -1px -1px yellow;
+    font-size: 72px;
+    position: relative;
+    top: 40px;
+    margin: auto;
+    opacity: .8;
+}
+
+/*----------------------------------------------------------
+To style the background <img>
+-------------------------------------------------------------*/
+
+img {
+    width: 100%;
+    height: 1000px;
+}
+
+.y {
+    opacity: .5;
+}
+
+/*----------------------------------------------------------
+To style <nav> and its elements
+-------------------------------------------------------------*/
+
+nav {
+    background: darkgreen;
+    justify-content: center;
+}
+
+#navbar-site {
+    font-size: 16px;
+    height: 50px;
+    color:yellow;
+}
+
+ul {
+    position: relative;
+    top: 10px;
+}
+
+a {
+    color: yellow;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+/*----------------------------------------------------------
+To style <footer> and its elements
+-------------------------------------------------------------*/
+
+.breakingNews {
+    background-color: rgba(196, 3, 3, 0.735);
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    color: white;
+    font: 1.2em sans-serif;
+    font-weight: 600;
+}
+
+#ticker {
+    font: 26px sans-serif;
+    word-spacing: 2px;
+}
+
+#randomEvents {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.blue {
+    background-color: blue;
+    height: 35px;
+}
+
+.tickerDiv {
+ color: white;
+}
+
+
+/*-------------------------------
+MEDIA QUERIES:
+---------------------------------*/
+
+/* To add style and adjustmets to the menu button.  */
+@media only screen and (max-width: 575px) {
+    .menu {
+        color: yellow;
+        border: solid 1px yellow;
+        width: 75px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .menuBackground {
+        background-color: darkgreen;
+        border: solid 1px yellow;
+        width: 100px;
+        margin: auto;
+    }
+    
+    /* To show body overflow  */
+    body {
+        overflow: visible;
+    }
+    
+    /* To adjust size of background image */
+    img {
+        width: 100%;
+        height: 1475px;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    
+    /* To adjusts <button>'s */
+    .Btn {
+        width: 150px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    /* To adjust <h1> */
+    .logo {
+        font-size: 100px;
+    }
+    
+    /* To adjust <li>'s */
+    li {
+        font-size: 20px;
+    }
+
+    #randomEvents {
+        font-size: 26px;
+    }
+
+    #ticker {
+        font-size: 30px;
+    }
+
+    .blue {
+        height: 40px;
+    }
+
+    .transparent {
+        height: 860px;
+    }
+
+    body{
+        height: 850px;
+    }
+
+}
+
+
+    
+    
+
+
+
+
+

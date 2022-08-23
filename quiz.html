@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Market Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/quiz.css" >
+</head>
+<body>
+     <!-- navbar and its element -->
+     <nav id="navbar-site" class="navbar-nav a navbar-expand-sm fixed-top d-flex justify-content-between">
+            <div class="container">
+                <button class=" menu mt-2 bg-success  navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+                </button>
+                <!-- navbar and its element -->
+                <div class="menuBackground collapse navbar-collapse" id="myTogglerNav"> 
+                    <div class="navbar-nav m-auto ">
+                        <ul class="navbar-nav justify-content-center">
+                            <li class="nav-item "><a class= "nav-link" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class= "nav-link" href="marketPulse.html">MARKET PULSE</a></li>
+                            <li class="nav-item"><a class= "nav-link active text-success" href="quiz.html"> MARKET QUIZ</a></li>
+                            <li class="nav-item"><a class= "nav-link" href="portfolioRisk.html">RISK PORTFOLIO</a></li>
+                        </ul>
+                    </div><!-- navbar -->
+                </div><!-- navbar collapse -->
+            </div><!-- container -->
+        </nav><!-- nav -->
+    <!-- background image -->
+    <img class="y transparent card-img-center bg-dark" src="images/Ben.jpg" alt="stock-market-board">
+    <!-- heading -->
+    <div class="card-img-overlay card-inverse text-center">
+        <h1 class="card-title display-3 font-weight-bold logo">  Market Quiz
+        </h1>
+    </div>
+    <!-- The instructions to quiz -->
+    <div class=" quizInstructionsDiv card-img-overlay card-inverse text-center">
+        <p id='quizInstructions' >The is a quiz to test your overall knowledge of the market. You will have 15 seconds to answer each question. A question that runs out of time will be counted as incorrect. Press the ready button when you are ready to take the quiz. Good luck! </p>
+    </div>    
+    
+    <div class="card-img-overlay card-inverse text-center">
+        <div id="container">
+            <!-- To store time to answer questions -->
+            <h2>Time to Answer: <span id='time'></span></h2>
+            <!-- To store the correct and incorrect count -->
+            <div class="scoreCount-wrapper">
+                <div id='correctCountDiv'>Correct: <span id='correctCount'></span></div>
+                <div id='incorrectCountDiv'>Incorrect: <span id='incorrectCount'></span></div>
+            </div>
+            <br><!-- line break -->
+            <!-- To hold the READY, YES, NO buttons -->
+            <div class="button-container">
+                <button class="Btn" id="ready">READY</button>
+                <button class="Btn" id="next">NEXT QUESTION</button>
+                <button class="Btn" id="yes">YES</button>
+                <button class="Btn" id="no">NO</button>
+            </div>
+            <div class=" green-box container-fluid"> 
+                <br><!-- line break -->  
+                <!-- Where the questions, choices, results, and correct answer will be held  -->
+                <div class="data-wrapper">
+                    <div id='printQuestions'></div>
+                    <div id='printAnswers'></div>
+                    <div id='printResults'></div>
+                    <div id='correctAnswer'></div>
+                    <div id='yourScore'></div>
+                </div><!-- data-wrapper -->
+            </div><!-- container-fluid -->
+        </div><!-- container-->
+    </div><!-- card-img-overlay -->
+    <!-- To store store stock and breaking news info -->
+    <footer>
+        <div class= "text-center ">
+            <div id="randomEvents"></div>
+        </div>
+        <div id="tickerDiv" class=" card-block blue text-white">  
+            <p id="ticker" class=" text-nowrap pt-1 pb-1 " style="position: relative;"></p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin = "anonymous"></script>
+    <script src="./javaScript/quiz.js"></script>
+    <script src="./javaScript/main.js"></script>
+        
+</body>
+</html> 

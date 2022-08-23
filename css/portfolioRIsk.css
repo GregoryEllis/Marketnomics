@@ -1,0 +1,379 @@
+/* ---------------------------------------------------
+To style and position canvas which will hold pie-chart
+---------------------------------------------------*/
+canvas {
+    border: solid rgb(0, 158, 67) 2px;
+    background-color: black;
+    position: relative;
+    top: 300px;
+    width: 800px; 
+    padding-top: 10px;
+    opacity: .8;
+} 
+
+/* ---------------------------------------------------
+To style <h1 class= "logo"> Portfolio Risk </h1>
+---------------------------------------------------*/
+.logo {
+    letter-spacing: .02em;
+}
+
+/* ---------------------------------------------------
+To style and position <h2> heading for pie-chart
+---------------------------------------------------*/
+#h2Div {
+    color: white;
+    margin: 305px auto;
+    z-index: 15;
+}
+
+/* ---------------------------------------------------
+To style and position the legend and its components
+---------------------------------------------------*/
+.legend {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -10px;
+}
+
+.legendDiv {
+    color: white;
+    margin-top: 20px;
+    margin-right: 300px;
+    font-weight: 500;
+    font-size: 18px;
+    float: left;
+}
+
+#legend-container {
+    z-index: 10;
+    margin: 290px;
+    margin-left: 200px;
+    width: 50%;
+}
+
+.stocks {
+    position: relative;
+    /* right: -12px; */
+} 
+
+.bitcoins {
+    position: relative;
+    /* right: -10px; */
+}
+
+
+span {
+    position: relative; 
+    left: 10px;
+    width: 50px;
+}
+
+/*-------------------------------------------------------------------
+To style and position the <form> and its inputs.
+--------------------------------------------------------------------*/
+#bondPrecent {
+    position: relative;
+    left: 19px;
+}
+
+#formDiv {
+    color: white;
+    margin: 0 auto;
+    margin-top: 258px;
+    z-index: 20;
+    background-color: green;
+    border: solid yellow 1px;
+    height: 60px;
+    opacity: .8;
+}
+
+.f {
+    margin-left: 60px;
+    margin-top: -5px;
+}
+
+input {
+    margin-left: 15px;
+    background-color: black;
+   
+}
+
+#submitBtn {
+    background-color: yellow;
+    margin-left: 20px;
+    color: green;   
+}
+
+.x {
+    font-weight: 900;
+}
+
+
+/*---------------------------------------------------------------------
+To style and position instruction <button>.
+--------------------------------------------------------------------*/
+.instructBtn {
+    position: relative; 
+    top: 110px;
+    background-color:rgb(0, 158, 67);
+    color: yellow;
+    border: solid 1px yellow;
+    z-index: 10;
+    opacity: .8;
+}
+
+.instructBtn:hover {
+    background-color :yellow;
+    color: green;
+    border: solid 1px green;
+}
+
+/*---------------------------------------------------------------------
+To style and position the intructions to the app.
+--------------------------------------------------------------------*/
+#instructMsg {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    border: solid 2px yellow;
+    margin: auto;
+    margin-top: 15px;
+}
+
+/*---------------------------------------------------------------------
+To style and position the warning message.
+----------------------------------------------------------------------*/
+.modalBorder {
+    border: solid 5px rgb(221, 46, 64)
+}
+
+/*---------------------------------------------------------------------
+To style and position risk output
+----------------------------------------------------------------------*/
+#riskDiv {
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    border: solid 2px yellow;
+    position: relative;
+    top: 700px;
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#riskOutput {
+    color: rgb(64, 255, 0);
+    font-weight: 500;
+}
+
+
+/*===================================================================
+MEDIA JQUERIES
+===================================================================*/
+
+@media only screen and (max-width: 575px) {
+    
+    /*--------------------------------------------------------------
+    To adjust <canvas> 
+   ---------------------------------------------------------------*/
+   canvas {
+        width: 425px;
+        height: 250px;
+        margin-top: 75px;
+        padding-top: 30px;
+        z-index:10 ;
+    }
+    
+    /*----------------------------------------------------------------
+    To adjust <form> and its elements 
+    ---------------------------------------------------------------*/
+    #formDiv {
+        width: 425px;
+        margin-top: 333px;
+        z-index: 20;
+    }
+    
+    .f {
+        margin-left: 10px;
+        z-index: 10;
+    }
+    ::placeholder{
+        font-size:  10px;
+        z-index: 10;
+    }
+    
+    /*----------------------------------------------------------------
+     To adjust <button class="instructBtn"> 
+    --------------------------------------------------------------*/
+    .instructBtn {
+        position: relative; 
+        top: 95px;
+        z-index: 10
+    }
+    
+    /*--------------------------------------------------------------
+    To abjust <div id="intructMsg"> (The intruction message)
+    -------------------------------------------------------------- */
+    #instructMsg {
+        font-size: 12px;
+        width: 80%;
+        margin-top: 2px;
+    }
+
+    /*--------------------------------------------------------------
+     To adjust <div id="legend-container"> and its elements 
+     -------------------------------------------------------------*/
+    #legend-container {
+        z-index: 20;
+        margin-left: 35px;
+        margin-top: 400px;
+        float: left;      
+    }
+    
+    .legendDiv {
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        height: 25px; 
+       
+    }
+    
+     .legend {
+        width: 20px;
+        height: 20px;
+        margin-right: -12px;
+        float: left;
+    }
+     
+    /*--------------------------------------------------------------
+     To adjust the <h2 id="h2Div"> Pie Chart </h2>
+     --------------------------------------------------------------*/
+    
+     #h2Div {
+        z-index: 25;
+        margin-top: 380px;
+    }
+    
+    h2 {
+        font-size: 18px;
+        
+    }
+    /*--------------------------------------------------------------
+     To adust <div id="riskDiv"> Your Portfolio Risk is: </div> 
+     --------------------------------------------------------------*/
+    
+     #riskDiv {
+        background-color: black;
+        font-size: 20px;
+        width: 450px;
+    }
+    
+}
+@media only screen and (min-width: 1920px) {
+    
+    /*-------------------------------------------------------------- 
+    To adjust <canvas>
+     --------------------------------------------------------------*/
+    canvas {
+        width: 1000px;
+        height: 525px;
+        z-index: 10; 
+    }
+
+    /*--------------------------------------------------------------
+     To adust <div id="riskDiv"> Your Portfolio Risk is: </div> 
+     --------------------------------------------------------------*/
+    #riskDiv {
+        z-index: 45;
+        margin-top: 30px;
+        font-size: 48px;
+        width: 975px;
+        height: 75px;
+        padding-top: 20px;
+    }
+
+    /*-------------------------------------------------------------- 
+    To adjust <button class="instructBtn">Instructions</button>
+    -------------------------------------------------------------- */
+    .instructBtn {
+        position: relative; 
+        top: 80px;
+        z-index: 20;
+        font-size: 24px;
+        height: 30px;
+    }
+
+    /*--------------------------------------------------------------
+     To adust <div id="intructMsg"> App In 
+     --------------------------------------------------------------*/
+    #instructMsg {
+        margin-top: -10px;
+    }
+
+    /*--------------------------------------------------------------
+     To adjust <div class="top-container"> and its children <h1>, <button>, and <p>'s  
+     --------------------------------------------------------------*/
+    .top-container {
+       margin-top: -15px;
+    }
+
+    /*-------------------------------------------------------------- To adjust <div id="legend-container"> and its children 
+    --------------------------------------------------------------*/
+    #legend-container {
+        z-index: 20;
+        margin-left: 500px;
+        margin-top: 300px;
+        width: 45%;
+    } 
+
+    .legendDiv {
+        font-size: 26px; 
+    }
+
+    /*-------------------------------------------------------------- To adjust <h2> Pie Chart </h2> 
+    --------------------------------------------------------------*/
+    h2 {
+        font-size: 32px;
+    }
+
+    /*--------------------------------------------------------------
+     To adjust <div id="formDiv"> and its children <form> , <input>, <button>  
+     --------------------------------------------------------------*/
+    #formDiv {
+        width: 1000px;
+    }
+
+    .f {
+        margin-left: 160px;
+    }
+
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    #submitBtn {
+        width: 100px;
+        height: 35px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

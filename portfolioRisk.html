@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pie chart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/portfolioRIsk.css">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+</head>
+
+<body>
+    <!-- nav and its elements -->
+    <nav id="navbar-site" class="navbar-nav a navbar-expand-sm fixed-top d-flex justify-content-between">
+        <div class="container">  
+            <button class=" menu mt-2 navbar-toggler bg-success" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+            </button>
+            <div class="menuBackground collapse navbar-collapse" id="myTogglerNav"> 
+                <div class="navbar-nav m-auto ">
+                    <ul class="navbar-nav">
+                        <li class="nav-item "><a class= "nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="marketPulse.html">MARKET PULSE</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="quiz.html"> MARKET QUIZ</a></li>
+                        <li class="nav-item"><a class= "nav-link active text-success" href="portfolioRisk.html">PORTFOLIO RISK </a></li>
+                    </ul><!-- navbar-nav -->
+                </div><!-- navbar -->
+            </div><!-- collapse -->
+        </div><!-- container -->
+    </nav><!-- nav -->
+    
+    <!-- background image -->
+    <img class="y transparent card-img-center bg-dark" src="images/Ben.jpg" alt="stock-market-board">
+    
+    <div class=" card-img-overlay top-container">
+        <!-- heading -->
+        <h1 class="card-title logo">  Portfolio Risk</h1>
+        <!-- button -->
+        <button class="instructBtn">Instructions</button>
+        <!-- instruction to app -->
+        <p id="instructMsg">Enter your percentages in the fields that apply . Your portfolio output will range from highly aggressive to highly conservative. Highly aggressive being the highest risk exposure and highly conservative being the lowest risk exposure. Percentages must equal 100%.  </p>  
+            <div class="container">
+                <div class="row">
+                    <section class="col-12">    
+                        <div class="modal fade" id="warningModal">
+                            <div class="modal-dialog">
+                                <div class="modalBorder modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title text-danger">Warning!</h2>
+                                        <button type="button"
+                                        class="close" 
+                                        id="x" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div><!-- modal-header -->
+                                <div class="modal-body">
+                                    <p id="msg"></p>
+                                </div><!-- modal-body -->
+                            </div><!-- modal-content -->
+                        </div><!-- modal dialog -->
+                    </div><!-- modal fade -->
+                </section>
+            </div><!-- row -->
+        </div><!-- container -->
+    </div>
+    <!-- User Input -->
+    <div  id="formDiv" class="card-img-overlay text-left col-md-7">
+        <form class='form-group col-12 form-inline f '>
+            <!-- <label for='stocks'>Stock %age</label> -->
+            <input type='text' id='stockField' class='x form-control col-2 text-center ' name='stocks' placeholder="Stocks %" required/>
+            <!-- <label for='bonds'>Bond %age</label> -->
+            <input type='text' id='bondField' class='x form-control col-2 text-center' name='bitcoin' placeholder="bonds %" required/>
+            <!-- <label for='bonds'>Bitcoin %age</label> -->
+            <input type='text' id='bitcoinField' class='x form-control col-2 text-center ' name='bitcoin' placeholder="bitcoins %" required/>
+            <button type='submit' class='x btn btn-primary' id='submitBtn'>Submit</button>
+        </form>
+    </div>
+    <!-- heading for pie chart -->
+    <div id="h2Div" class="card-img-overlay text-center">
+        <h2>Pie Chart</h2>
+    </div>
+    <!-- to store legend info -->
+    <div  id="legend-container" class=" card-img-overlay text-center">
+        <div class="legendDiv stocks"><img class="legend" src="images/green.jpeg"/>  STOCKS:<span id="stockPrecent"></span></div>
+        <div class="legendDiv bonds"><img class="legend" src="images/yellow.jpeg"/>  BONDS:<span id="bondPrecent"></span></div>
+        <div class="legendDiv bitcoins"><img class="legend" src="images/yellowgreen.jpeg"/>  BITCOIN:<span id="bitcoinPrecent"></span></div>
+    </div>
+    <!-- canvas -->
+    <div class=" card-img-overlay text-center col-12 container-fluid">
+        <canvas id="canvas" width="600" height="350">
+        </canvas> 
+    </div>
+    <!-- to store risk output -->
+    <div class="card-img-overlay text-center">
+        <div id="riskDiv">Your Portfolio Risk is:<span id="riskOutput"></span> </div>
+    </div>
+    <!-- To store store stock and breaking news info -->
+    <footer>
+        <div class= "text-center ">
+            <div id="randomEvents"></div>
+        </div>
+        <div class="card-block blue text-white">  
+            <p id="ticker" class=" text-nowrap pt-1 pb-1 " style="position: relative;"></p>
+        </div>
+    </footer>
+    
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin = "anonymous"></script>
+    <script src="./javaScript/portfolioRisk.js"></script>
+    <script src="./javaScript/main.js"></script>
+    
+</body>
+</html>
